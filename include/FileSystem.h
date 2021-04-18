@@ -7,7 +7,16 @@ extern "C"
 {
 #endif
 
-size_t get_file_size(const char *file_path); 
+typedef struct {
+    void    *file;
+    size_t  file_size;
+}EntireFile;
+
+size_t get_file_size(const char *file_path);
+
+int8_t load_entire_file(const char *file_path,EntireFile *file);
+void free_file(EntireFile *file);
+
 
 #ifdef __cplusplus
 } // extern "C"

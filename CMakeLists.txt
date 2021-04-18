@@ -10,6 +10,7 @@ include_directories(include)
 
 file(GLOB SOURCES
     src/Win32FileSystem.c
+    src/common.c
     src/main.c
     )
 
